@@ -28,7 +28,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        min-height: 100vh; //maybe change this back to height?
         overflow: hidden;
         margin: 0 auto;
 
@@ -61,10 +61,33 @@ body {
             background-color: #fff;
             border-radius: $border-radius;
             padding: 37px;
-            height: 410px;
+            // height: 410px;
             box-shadow: 0px 7px 0px 0px rgba(0,0,0,0.18);
             -webkit-box-shadow: 0px 7px 0px 0px rgba(0,0,0,0.18);
             -moz-box-shadow: 0px 7px 0px 0px rgba(0,0,0,0.18);
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            position: relative;
+
+            i {
+                position: absolute;
+                top:15px;
+                right: 15px;
+                visibility: hidden;
+            }
+
+            small {
+                position: absolute;
+                bottom:0;
+                left:0;
+                font-size: 13px;
+                color:red;
+                font-style: italic;
+                visibility: hidden;
+            }
         }
 
         .purple {
@@ -104,6 +127,11 @@ body {
                 border: thin $dk-blue solid;
             }
 
+            input.invalid {
+                border-color: #900;
+                background-color: #fdd;
+              }
+
             .btn {
                 width: 100%;
                 font-family: inherit;
@@ -118,6 +146,11 @@ body {
                 box-shadow: 0px 5px 0px 0px rgba(53,194,74,0.18);
                 -webkit-box-shadow: 0px 5px 0px 0px rgba(53,194,74,0.18);
                 -moz-box-shadow: 0px 5px 0px 0px rgba(53,194,74,0.18);
+            }
+
+            .btn:hover {
+                background-color: lighten($color: $green, $amount: 10%);
+                cursor: pointer;
             }
 
             .trial-text {
