@@ -83,10 +83,36 @@ body {
                 position: absolute;
                 bottom:0;
                 left:0;
-                font-size: 13px;
+                font-size: 10px;
                 color:red;
                 font-style: italic;
                 visibility: hidden;
+            }
+        }
+
+        .success {
+            input {
+                border-color: $green;
+            }
+
+            .fa-check-circle {
+                visibility: visible;
+                color: $green;
+            }
+        }
+
+        .error {
+            input {
+                border-color: red;
+            }
+
+            .fa-exclamation-circle {
+                visibility: visible;
+                color: red;
+            }
+
+            small {
+                visibility: visible;
             }
         }
 
@@ -133,6 +159,7 @@ body {
               }
 
             .btn {
+                display: block;
                 width: 100%;
                 font-family: inherit;
                 height: 50px;
